@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Silom.ttf">
+            <string>Silom</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="kRm-Yv-vEY">
+            <objects>
+                <viewController id="ooa-ew-lBH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pVg-fP-ueb" customClass="MKMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VSy-Ef-ixf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pyp-ch-XdX"/>
+                        <color key="backgroundColor" name="Green"/>
+                        <constraints>
+                            <constraint firstItem="Pyp-ch-XdX" firstAttribute="bottom" secondItem="VSy-Ef-ixf" secondAttribute="bottom" id="0L5-t0-uS7"/>
+                            <constraint firstItem="Pyp-ch-XdX" firstAttribute="trailing" secondItem="VSy-Ef-ixf" secondAttribute="trailing" id="H9Z-av-MFc"/>
+                            <constraint firstItem="VSy-Ef-ixf" firstAttribute="leading" secondItem="Pyp-ch-XdX" secondAttribute="leading" id="h3D-Hh-rxC"/>
+                            <constraint firstItem="VSy-Ef-ixf" firstAttribute="top" secondItem="Pyp-ch-XdX" secondAttribute="top" id="oc8-QD-0HM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="Tnh-Qn-FuE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZl-iq-mWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407" y="-318"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="i2i-pO-qZ5">
+            <objects>
+                <viewController id="iKQ-Vz-NtB" customClass="LocationVC" customModule="Maps_for_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lWe-Nu-dn6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd1-xR-BOo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="c1w-6h-8bf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="56"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_background" translatesAutoresizingMaskIntoConstraints="NO" id="Lbn-nO-teW">
+                                <rect key="frame" x="107" y="234" width="201" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-lt-Sum">
+                                <rect key="frame" x="17" y="595" width="83" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dataLat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMS-Wv-dhc">
+                                <rect key="frame" x="107" y="552" width="287" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dataLon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkV-kz-k7W">
+                                <rect key="frame" x="107" y="595" width="287" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fa-Rl-DPK">
+                                <rect key="frame" x="20" y="552" width="80" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t4c-wc-1hM"/>
+                        <color key="backgroundColor" name="Green"/>
+                        <constraints>
+                            <constraint firstItem="Hd1-xR-BOo" firstAttribute="leading" secondItem="t4c-wc-1hM" secondAttribute="leading" id="HdX-1e-iQX"/>
+                            <constraint firstItem="t4c-wc-1hM" firstAttribute="trailing" secondItem="Hd1-xR-BOo" secondAttribute="trailing" id="quG-cy-R93"/>
+                            <constraint firstItem="Hd1-xR-BOo" firstAttribute="top" secondItem="t4c-wc-1hM" secondAttribute="top" id="tL3-nI-BIF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Location" image="location.fill" catalog="system" id="4EG-Gf-iXu"/>
+                    <connections>
+                        <outlet property="dataLat" destination="ZMS-Wv-dhc" id="Xh5-co-YW1"/>
+                        <outlet property="dataLon" destination="KkV-kz-k7W" id="Pz1-gW-z0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezL-fM-K7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.24637681159425" y="-926.11607142857133"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JyR-un-4lC">
+            <objects>
+                <tabBarController id="RyC-cI-38k" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9OB-cv-Nil">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iKQ-Vz-NtB" kind="relationship" relationship="viewControllers" id="fTt-L9-f0Z"/>
+                        <segue destination="ooa-ew-lBH" kind="relationship" relationship="viewControllers" id="Eii-KD-ZF2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Aa-b7-UTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1296" y="-622"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_background" width="101" height="144.5"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <namedColor name="Green">
+            <color red="0.0" green="0.87800002098083496" blue="0.019999999552965164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
